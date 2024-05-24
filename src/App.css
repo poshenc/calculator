@@ -4,6 +4,7 @@
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px repeat(5, 1fr);
   gap: 10px;
   padding: 10px;
   background-color: black;
@@ -16,19 +17,28 @@
   background-color: #FFFFFF;
   padding: 8px;
   border-radius: 8px;
-  display: flex;
-  justify-content: end;
-  align-items: end;
+  display: block;
+  text-align: end;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
 }
 
 .button {
   background-color: #FFFFFF;
+  font-size: 30px;
+  font-weight: 500;
   padding: 8px;
   display: flex;
   justify-content: end;
   align-items: center;
   cursor: pointer;
   border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #008CBA;
 }
 
 .equal {

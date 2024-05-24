@@ -1,14 +1,16 @@
 const Button = ({
-  value
+  value,
+  onClick
 }: {
   value: string;
+  onClick: (key: string) => void;
 }) => {
   let btnClass = 'button'
   if (value === '=') btnClass += ' equal'
   if (value === '0') btnClass += ' zero'
 
   return (
-    <div className={btnClass}>{value}</div>
+    <button className={btnClass} onClick={() => onClick(value)}>{value}</button>
   )
 }
 
